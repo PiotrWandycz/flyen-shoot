@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private float cameraBoundX;
     private float cameraBoundY;
 
+    //public GameObject LeftSidebar;
+    //public GameObject RightSidebar;
+    //private Rect leftSidebarRect;
+    //private Rect rightSidebarRect;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -18,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
 
         cameraBoundY = Camera.main.orthographicSize;
         cameraBoundX = cameraBoundY * Screen.width / Screen.height;
+
+        //leftSidebarRect = LeftSidebar.GetComponent<RectTransform>().rect;
+        //rightSidebarRect = RightSidebar.GetComponent<RectTransform>().rect;
     }
 
     void FixedUpdate()  
@@ -36,9 +44,16 @@ public class PlayerMovement : MonoBehaviour
 
     void BoundPlayer()
     {
-        Debug.Log(meshFilter.bounds.max.x);
         float newX = Mathf.Clamp(rigidbody.position.x, -cameraBoundX + meshFilter.bounds.max.x, cameraBoundX - meshFilter.bounds.max.x);
         float newY = Mathf.Clamp(rigidbody.position.y, -cameraBoundY + meshFilter.bounds.max.y, cameraBoundY - meshFilter.bounds.max.y);
         rigidbody.position = new Vector2(newX, newY);
     }
+
+    //float GetLeftBoundMin(float cameraX, float playerWidth, float sidebarWidth)
+    //{
+    //    return
+    //        -cameraX
+    //        + playerWidth
+    //        + (sidebarWidth / 50);
+    //}
 }

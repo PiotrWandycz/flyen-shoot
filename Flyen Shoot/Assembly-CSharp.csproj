@@ -46,8 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\MenuController.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Behaviors\SelfDestruct.cs" />
+     <Compile Include="Assets\Scripts\Behaviors\SpawnEnemies.cs" />
+     <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MenuController.cs" />
+     <Compile Include="Assets\Scripts\Movements\MoveOneDirection.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
