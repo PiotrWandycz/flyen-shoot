@@ -1,15 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SelfDestruct : MonoBehaviour 
+public class SelfDestruct : MonoBehaviour
 {
-    public float timer = 5.0f;
+    public float LifeTime;
 
-    void Update()
+    void OnEnable()
     {
-        timer -= Time.deltaTime;
+        Invoke("Destroy", LifeTime);
+    }
 
-        if (timer <= 0.0f)
-            Destroy(gameObject);
+    void Destroy()
+    {
+        gameObject.SetActive(false);
+    }
+
+    void OnDisable()
+    {
+        CancelInvoke();
     }
 }

@@ -14,4 +14,11 @@ public class Constants
         DownLeft,
         DownRight
     }
+
+    public enum Layers
+    {
+        Player = 8,
+        Enemy = 9,
+        Collectable = 10
+    }
 }
