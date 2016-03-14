@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Collisions\EnemyCollide.cs" />
      <Compile Include="Assets\Scripts\Collisions\PlayerCollide.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MapController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MenuController.cs" />
      <Compile Include="Assets\Scripts\Movements\MoveOneDirection.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
