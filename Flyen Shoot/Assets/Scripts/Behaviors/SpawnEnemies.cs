@@ -28,9 +28,6 @@ public class SpawnEnemies : MonoBehaviour
         enemies = new List<GameObject>();
         rand = new System.Random();
 
-        // Wypełniamy listę wrogów 
-        // Jeśli dojdzie kolejny typ wroga, będziemy mogli ustawić tu prawdopodobieństwo występowania, np.
-        // Chcemy mieć 80% szans na spotkanie prostego wroga, czyli dodajemy 24 prostych i 6 trudnych.
         for (int i = 0; i < EnemyPoolSize; i++)
         {
             GameObject enemy = (GameObject)Instantiate(EnemyOneDir);

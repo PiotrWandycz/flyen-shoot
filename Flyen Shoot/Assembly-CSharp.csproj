@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Controllers\MenuController.cs" />
      <Compile Include="Assets\Scripts\Movements\MoveOneDirection.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
