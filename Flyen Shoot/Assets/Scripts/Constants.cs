@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Constants
 {
+    public class Levels
+    {
+        public static string MENU = "Menu";
+    }
+
     public enum Direction
     {
         Up,
@@ -19,6 +24,7 @@ public class Constants
     {
         Player = 8,
         Enemy = 9,
-        Collectable = 10
+        Collectable = 10,
+        PlayerBullet = 11
     }
 }
