@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Constants
 {
+    public static int PIXELS_TO_UNIT = 100;
+
     public class Levels
     {
         public static string MENU = "Menu";
