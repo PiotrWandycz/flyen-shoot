@@ -27,6 +27,7 @@ public class Constants
         Player = 8,
         Enemy = 9,
         Collectable = 10,
-        PlayerBullet = 11
+        PlayerBullet = 11,
+        IgnoreCollision = 12
     }
 }

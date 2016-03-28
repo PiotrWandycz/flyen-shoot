@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    public float DelayTime = 5.0f;
+    public float DelayTime = 4.0f;
     public float SpawnTime = 2.5f;
 
     public float PosXMax;

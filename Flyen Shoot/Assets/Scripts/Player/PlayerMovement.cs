@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float Speed = 5.0f;
 
     private Rigidbody2D rigidbody;
-    private Mesh meshFilter;
+    private Sprite sprite;
 
     private float cameraHeight;
     private float cameraWidth;
@@ -19,10 +19,12 @@ public class PlayerMovement : MonoBehaviour
     private float leftSidebarWidth;
     private float rightSidebarWidth;
 
+    public Animator animator;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        meshFilter = GetComponent<MeshFilter>().mesh;
+        sprite = GetComponent<SpriteRenderer>().sprite;
 
         cameraHeight = Camera.main.orthographicSize;
         cameraWidth = Camera.main.orthographicSize * Camera.main.aspect;
@@ -32,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
         rightSidebarRect = RightSidebar.GetComponent<RectTransform>().rect;
         leftSidebarWidth = leftSidebarRect.size.x / unitWide;
         rightSidebarWidth = rightSidebarRect.size.x / unitWide;
+
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()  
@@ -46,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
 
     void BasicMovement()
     {
+        if (Input.GetAxis("Vertical") > 0.0f)
+            animator.SetBool("MovingForward", true);
+        else
+            animator.SetBool("MovingForward", false);
+
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
         rigidbody.velocity = movement * Speed;
     }
@@ -53,12 +62,12 @@ public class PlayerMovement : MonoBehaviour
     void ScreenBoundaries()
     {
         float newX = Mathf.Clamp(transform.position.x,
-                         -cameraWidth + meshFilter.bounds.max.x + leftSidebarWidth,
-                         cameraWidth - meshFilter.bounds.max.x - rightSidebarWidth);
+                         -cameraWidth + sprite.bounds.max.x + leftSidebarWidth,
+                         cameraWidth - sprite.bounds.max.x - rightSidebarWidth);
 
-        float newY = Mathf.Clamp(transform.position.y, 
-                         -cameraHeight + meshFilter.bounds.max.y, 
-                         cameraHeight - meshFilter.bounds.max.y);
+        float newY = Mathf.Clamp(transform.position.y,
+                         -cameraHeight + sprite.bounds.max.y,
+                         cameraHeight - sprite.bounds.max.y);
 
         transform.position = new Vector3(newX, newY, transform.position.z);
     }

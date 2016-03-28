@@ -3,7 +3,6 @@ using System.Collections;
 
 public class HandleDamage : MonoBehaviour
 {
-    //TODO: #brzydkiKod #akcesorNieChcialDzialac #głupieTłumaczenia
     private float healthPoints;
     public float HealthPoints;
 
@@ -16,9 +15,6 @@ public class HandleDamage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collidingObject)
     {
-        Debug.Log("collision called from " + System.Enum.GetName(typeof(Constants.Layers), gameObject.layer) 
-            + " with " + System.Enum.GetName(typeof(Constants.Layers), collidingObject.gameObject.layer));
-
         if (collidingObject.gameObject.GetComponent<HandleDamage>() != null)
             healthPoints -= collidingObject.gameObject.GetComponent<HandleDamage>().Damage;
     }
@@ -26,14 +22,19 @@ public class HandleDamage : MonoBehaviour
     void Update()
     {
         if (healthPoints <= 0)
-            Die();
+            OutOfHealthPoints();
     }
 
-    void Die()
+    void OutOfHealthPoints()
     {
-        if (gameObject.layer == (int)Constants.Layers.Player)
-            Application.LoadLevel(Constants.Levels.MENU);
-
-        gameObject.SetActive(false);
+        switch (gameObject.layer)
+        {
+            case (int)Constants.Layers.Player:
+                Application.LoadLevel(Constants.Levels.MENU);
+                break;
+            default:
+                gameObject.SetActive(false);
+                break;
+        }
     }
 }
