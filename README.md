@@ -1,5 +1,5 @@
 # flyen-shoot
-Folder structure:
-Flyen Shoot - game project
-Demo - game demo stable
+Folder structure:<br><br>
+Flyen Shoot - game project<br><br>
+Demo - game demo stable<br><br>
 Demo Beta - newest build
