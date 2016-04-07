@@ -1,6 +1,11 @@
 # =============== #
 # Unity ignored   #
 # =============== #
+
+# Folders
 Flyen\ Shoot/Temp/
 Flyen\ Shoot/Library/
 Flyen\ Shoot/obj/
+
+# Files
+player_win_development_x86.pdb

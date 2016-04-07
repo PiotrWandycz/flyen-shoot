@@ -48,11 +48,18 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Behaviors\HandleDamage.cs" />
      <Compile Include="Assets\Scripts\Behaviors\SelfDestruct.cs" />
-     <Compile Include="Assets\Scripts\Behaviors\SpawnEnemies.cs" />
+     <Compile Include="Assets\Scripts\Collectables\AddExtraLife.cs" />
+     <Compile Include="Assets\Scripts\Collectables\AddHP.cs" />
+     <Compile Include="Assets\Scripts\Collectables\AddHighScore.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\Controllers\CollectablesController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Controllers\MapController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MenuController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
      <Compile Include="Assets\Scripts\Movements\MoveOneDirection.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerGUI.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
  <Reference Include="UnityEngine.UI">

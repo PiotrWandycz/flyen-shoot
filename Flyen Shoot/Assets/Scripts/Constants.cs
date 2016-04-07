@@ -7,7 +7,13 @@ public class Constants
 
     public class Levels
     {
-        public static string MENU = "Menu";
+        public static string MENU = "0_Menu";
+    }
+
+    public class Tags
+    {
+        public static string PLAYER = "Player";
+        public static string LEVEL_EVENTS = "Level Events";
     }
 
     public enum Direction

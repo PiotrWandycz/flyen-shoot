@@ -5,19 +5,19 @@ public class PlayerMovement : MonoBehaviour
 {
     public float Speed = 5.0f;
 
-    private Rigidbody2D rigidbody;
-    private Sprite sprite;
+    Rigidbody2D rigidbody;
+    Sprite sprite;
 
-    private float cameraHeight;
-    private float cameraWidth;
-    private float unitWide;
+    float cameraHeight;
+    float cameraWidth;
+    float unitWide;
 
     public GameObject LeftSidebar;
     public GameObject RightSidebar;
-    private Rect leftSidebarRect;
-    private Rect rightSidebarRect;
-    private float leftSidebarWidth;
-    private float rightSidebarWidth;
+    Rect leftSidebarRect;
+    Rect rightSidebarRect;
+    float leftSidebarWidth;
+    float rightSidebarWidth;
 
     public Animator animator;
 

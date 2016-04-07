@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject BulletPrefab;
     public int MaxBullets = 25;
 
-    private List<GameObject> bullets;
+    List<GameObject> bullets;
 
     public float reloadTime = 0.1f;
     float cooldownTimer = 0.0f;
@@ -37,11 +37,11 @@ public class PlayerShooting : MonoBehaviour
             {
                 if (!bullets[i].activeInHierarchy)
                 {
-                    bullets[i].transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.5f, 0.0f);
+                    bullets[i].transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, 0.0f);
                     for (int c = 0; c < bullets[i].transform.childCount; c++)
                     {
                         var children = bullets[i].transform.GetChild(c);
-                        children.transform.position = new Vector3(children.transform.position.x, gameObject.transform.position.y + 0.5f, 0.0f);
+                        children.transform.position = new Vector3(children.transform.position.x, gameObject.transform.position.y + 0.1f, 0.0f);
                         children.gameObject.SetActive(true);
                     }
                     bullets[i].SetActive(true);
