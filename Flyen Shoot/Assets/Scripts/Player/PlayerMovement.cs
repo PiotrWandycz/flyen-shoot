@@ -12,11 +12,8 @@ public class PlayerMovement : MonoBehaviour
     float cameraWidth;
     float unitWide;
 
-    public GameObject LeftSidebar;
     public GameObject RightSidebar;
-    Rect leftSidebarRect;
     Rect rightSidebarRect;
-    float leftSidebarWidth;
     float rightSidebarWidth;
 
     public Animator animator;
@@ -30,9 +27,7 @@ public class PlayerMovement : MonoBehaviour
         cameraWidth = Camera.main.orthographicSize * Camera.main.aspect;
         unitWide = Camera.main.pixelWidth / 2 / cameraWidth;
 
-        leftSidebarRect = LeftSidebar.GetComponent<RectTransform>().rect;
         rightSidebarRect = RightSidebar.GetComponent<RectTransform>().rect;
-        leftSidebarWidth = leftSidebarRect.size.x / unitWide;
         rightSidebarWidth = rightSidebarRect.size.x / unitWide;
 
         animator = GetComponent<Animator>();
@@ -62,12 +57,12 @@ public class PlayerMovement : MonoBehaviour
     void ScreenBoundaries()
     {
         float newX = Mathf.Clamp(transform.position.x,
-                         -cameraWidth + sprite.bounds.max.x + leftSidebarWidth,
+                         -cameraWidth + sprite.bounds.max.x,
                          cameraWidth - sprite.bounds.max.x - rightSidebarWidth);
 
         float newY = Mathf.Clamp(transform.position.y,
-                         -cameraHeight + sprite.bounds.max.y,
-                         cameraHeight - sprite.bounds.max.y);
+                         -cameraHeight + Camera.main.transform.position.y + sprite.bounds.max.y,
+                         cameraHeight + Camera.main.transform.position.y - sprite.bounds.max.y);
 
         transform.position = new Vector3(newX, newY, transform.position.z);
     }

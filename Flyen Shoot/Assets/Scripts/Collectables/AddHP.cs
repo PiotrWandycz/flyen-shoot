@@ -9,11 +9,14 @@ public class AddHP : MonoBehaviour
     void OnDisable()
     {
         var player = GameObject.FindWithTag(Constants.Tags.PLAYER);
-        var playerHandleDamage = player.GetComponent<HandleDamage>();
+        if (player != null)
+        {
+            var playerHandleDamage = player.GetComponent<HandleDamage>();
 
-        playerHandleDamage.HealthPointsCurrent += HealthBonus;
+            playerHandleDamage.HealthPointsCurrent += HealthBonus;
 
-        if (playerHandleDamage.HealthPointsCurrent > playerHandleDamage.HealthPointsStart)
-            playerHandleDamage.HealthPointsCurrent = playerHandleDamage.HealthPointsStart;
+            if (playerHandleDamage.HealthPointsCurrent > playerHandleDamage.HealthPointsStart)
+                playerHandleDamage.HealthPointsCurrent = playerHandleDamage.HealthPointsStart;
+        }
     }
 }
