@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Behaviors\DeleteWhenInvisible.cs" />
      <Compile Include="Assets\Scripts\Behaviors\HandleDamage.cs" />
      <Compile Include="Assets\Scripts\Behaviors\SelfDestruct.cs" />
      <Compile Include="Assets\Scripts\Collectables\AddExtraLife.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\Controllers\MenuController.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
      <Compile Include="Assets\Scripts\Movements\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Movements\KamikazeMovement.cs" />
      <Compile Include="Assets\Scripts\Movements\MoveOneDirection.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerGUI.cs" />

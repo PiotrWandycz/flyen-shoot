@@ -50,6 +50,12 @@ public class PlayerMovement : MonoBehaviour
         else
             animator.SetBool("MovingForward", false);
 
+        if (Input.GetAxis("Horizontal") < 0.0f)
+            animator.SetBool("MovingLeft", true);
+        else
+            animator.SetBool("MovingLeft", false);
+
+
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
         rigidbody.velocity = movement * Speed;
     }

@@ -35,7 +35,7 @@ public class HandleDamage : MonoBehaviour
             case (int)Constants.Layers.Enemy:
                 var levelEvents = GameObject.FindWithTag(Constants.Tags.LEVEL_EVENTS);
                 var collectablesController = levelEvents.GetComponent<CollectablesController>();
-                collectablesController.TryToSpawnCollectable(gameObject.transform.position, 90);
+                collectablesController.TryToSpawnCollectable(gameObject.transform.position, 10);
                 gameObject.SetActive(false);
                 break;
             default:
