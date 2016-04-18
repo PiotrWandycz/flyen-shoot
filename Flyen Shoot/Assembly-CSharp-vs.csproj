@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Behaviors\DeleteWhenInvisible.cs" />
      <Compile Include="Assets\Scripts\Behaviors\HandleDamage.cs" />
      <Compile Include="Assets\Scripts\Behaviors\SelfDestruct.cs" />
+     <Compile Include="Assets\Scripts\Cameras\LockAspectRatio.cs" />
      <Compile Include="Assets\Scripts\Collectables\AddExtraLife.cs" />
      <Compile Include="Assets\Scripts\Collectables\AddHP.cs" />
      <Compile Include="Assets\Scripts\Collectables\AddHighScore.cs" />
