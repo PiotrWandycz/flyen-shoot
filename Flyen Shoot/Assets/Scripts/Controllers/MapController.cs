@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MapController : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class MapController : MonoBehaviour
 
         if (SliderStartValue > SliderMaxValue)
         {
-            Application.LoadLevel(NextLevel);
+            SceneManager.LoadScene(NextLevel);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HandleDamage : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class HandleDamage : MonoBehaviour
     public float HealthPointsCurrent;
 
     public float Damage;
+
+    public object SceneManagerConstants { get; private set; }
 
     void OnEnable()
     {
@@ -30,7 +33,7 @@ public class HandleDamage : MonoBehaviour
         switch (gameObject.layer)
         {
             case (int)Constants.Layers.Player:
-                Application.LoadLevel(Constants.Levels.MENU);
+                SceneManager.LoadScene(Constants.Levels.MENU);
                 break;
             case (int)Constants.Layers.Enemy:
                 var levelEvents = GameObject.FindWithTag(Constants.Tags.LEVEL_EVENTS);

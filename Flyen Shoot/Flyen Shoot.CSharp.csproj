@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -87,6 +81,7 @@
     <Compile Include="Assets\Scripts\Controllers\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Controllers\MapController.cs" />
     <Compile Include="Assets\Scripts\Controllers\MenuController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\PauseGame.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
     <Compile Include="Assets\Scripts\Movements\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Movements\KamikazeMovement.cs" />

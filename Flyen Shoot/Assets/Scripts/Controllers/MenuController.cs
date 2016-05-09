@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour 
 {
@@ -7,9 +8,9 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
-        Application.LoadLevel(StartLevel);
+        SceneManager.LoadScene(StartLevel);
     }
-    
+
     public void OpenOptions()
     {
         Debug.Log("Options clicked.");
