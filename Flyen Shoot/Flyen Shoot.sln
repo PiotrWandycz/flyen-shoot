@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyen Shoot.CSharp", "Flyen Shoot.CSharp.csproj", "{502B67CE-6EC9-CC49-95D8-607A72F5BA6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyen Shoot.CSharp.Editor", "Flyen Shoot.CSharp.Editor.csproj", "{402DAD2C-B1EF-BF40-7FEB-74F98295B890}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{502B67CE-6EC9-CC49-95D8-607A72F5BA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{502B67CE-6EC9-CC49-95D8-607A72F5BA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{502B67CE-6EC9-CC49-95D8-607A72F5BA6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{402DAD2C-B1EF-BF40-7FEB-74F98295B890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402DAD2C-B1EF-BF40-7FEB-74F98295B890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402DAD2C-B1EF-BF40-7FEB-74F98295B890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402DAD2C-B1EF-BF40-7FEB-74F98295B890}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

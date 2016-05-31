@@ -15,6 +15,7 @@ public class Constants
         public static string PLAYER = "Player";
         public static string LEVEL_EVENTS = "Level Events";
         public static string PAUSE_MENU = "Pause Menu";
+        public static string RIGHT_SIDEBAR = "Right Sidebar";
     }
 
     public enum Direction

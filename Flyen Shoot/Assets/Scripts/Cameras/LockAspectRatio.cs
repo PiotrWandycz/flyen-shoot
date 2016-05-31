@@ -7,7 +7,7 @@ public class LockAspectRatio : MonoBehaviour
     public float heightRatio = 4.0f;
     public float widthRatio = 3.0f;
 
-    void Start()
+    void Awake()
     {
         float targetAspect = heightRatio / widthRatio;
         float windowAspect = Screen.width / (float)Screen.height;

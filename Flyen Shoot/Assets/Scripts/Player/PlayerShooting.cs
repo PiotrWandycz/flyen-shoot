@@ -37,11 +37,11 @@ public class PlayerShooting : MonoBehaviour
             {
                 if (!bullets[i].activeInHierarchy)
                 {
-                    bullets[i].transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, 0.0f);
+                    bullets[i].transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
                     for (int c = 0; c < bullets[i].transform.childCount; c++)
                     {
                         var children = bullets[i].transform.GetChild(c);
-                        children.transform.position = new Vector3(children.transform.position.x, gameObject.transform.position.y + 0.1f, 0.0f);
+                        children.transform.position = new Vector3(children.transform.position.x, gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
                         children.gameObject.SetActive(true);
                     }
                     bullets[i].SetActive(true);

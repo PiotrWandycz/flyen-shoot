@@ -12,7 +12,6 @@ public class DeleteWhenInvisible : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Debug.Log("Object left camera and was destroyed.");
         Destroy(gameObject);
     }
 }

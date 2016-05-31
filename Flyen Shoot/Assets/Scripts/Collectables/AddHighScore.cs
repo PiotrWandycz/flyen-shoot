@@ -8,11 +8,13 @@ public class AddHighScore : MonoBehaviour
     void OnDisable()
     {
         var player = GameObject.FindWithTag(Constants.Tags.PLAYER);
+        var sidebar = GameObject.FindWithTag(Constants.Tags.RIGHT_SIDEBAR);
+
         if (player != null)
         {
             var playerData = player.GetComponent<PlayerData>();
-
             playerData.HighScore += ScoreBonus;
+            sidebar.GetComponent<PlayerGUI>().UpdateScore(playerData.HighScore);
         }
     }
 }

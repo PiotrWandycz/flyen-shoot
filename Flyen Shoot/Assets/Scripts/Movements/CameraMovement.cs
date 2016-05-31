@@ -9,11 +9,11 @@ public class CameraMovement : MonoBehaviour
 
     void Start()
     {
-        movement = new Vector3(0.0f, CameraSpeed, 0.0f); 
+        movement = Vector3.up * CameraSpeed;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        gameObject.transform.position += movement;
+        gameObject.transform.Translate(movement * Time.deltaTime, Space.Self);
     }
 }

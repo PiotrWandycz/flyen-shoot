@@ -4,11 +4,13 @@ using UnityEngine.SceneManagement;
 public class PauseGame : MonoBehaviour
 {
     bool paused = false;
+    Canvas canvas;
 
     void Start()
     {
-        Cursor.visible = false;
-        gameObject.transform.localPosition = new Vector3(100.0f, 100.0f, 1001.0f);
+        //Cursor.visible = false;
+        canvas = this.GetComponent<Canvas>();
+        canvas.enabled = false;
     }
 
     void Update()
@@ -27,15 +29,15 @@ public class PauseGame : MonoBehaviour
     public void StopGame()
     {
         Time.timeScale = 0;
-        gameObject.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
-        Cursor.visible = true;
+        canvas.enabled = true;
+        //Cursor.visible = true;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        gameObject.transform.localPosition = new Vector3(100.0f, 100.0f, 1001.0f);
-        Cursor.visible = false;
+        canvas.enabled = false;
+        //Cursor.visible = false;
         paused = false;
     }
 
